@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
-const booksRouter = require("./routes/index");
+const booksRouter = require("./routes/books");
 
 const app = express();
 app.use(express.json());
