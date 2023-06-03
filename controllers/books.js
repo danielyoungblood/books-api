@@ -1,6 +1,7 @@
 const db = require("../models/index");
 
-const getRoot = (req, res) => {
+
+const getBooks = (req, res) => {
   try {
     db.Book.find()
       .then((books) => {
@@ -130,10 +131,10 @@ const addBook = (req, res) => {
 
 //!!THIS HAS TO BE THE VERY LAST LINE OF THE FILE!!
 module.exports = {
-  getRoot,
   getBook,
   insertBooks,
   addBook,
   deleteBook,
   updateBook,
+  getBooks
 };

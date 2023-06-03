@@ -2,10 +2,11 @@ const express = require("express");
 const booksController = require("../controllers/books");
 const router = express.Router();
 
+
 router.get("/seed", booksController.insertBooks);
 
 //route for localhost:4000/books  (show all books)
-router.get("/", booksController.getRoot);
+router.get("/", booksController.getBooks);
 
 //route for localhost:4000/books/<id>  (show a book)
 router.get("/:id", booksController.getBook);
